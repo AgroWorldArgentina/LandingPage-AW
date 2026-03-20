@@ -1,0 +1,35 @@
+#headerContainer {
+  background-color: #377448;
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#logoContainer{
+    /* background-color: black; */
+    width: 5%;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbarContainer {
+  /* background-color: red; */
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navLinks {
+  color: white;
+  margin: 0px 60px;
+}
+
+.navLinks:hover{
+    color: #76b35a;
+}
