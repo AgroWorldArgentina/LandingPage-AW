@@ -47,39 +47,136 @@ h4 {
 
 /* --- */
 
-#seccionQuienesSomos{
-    position: relative;
-    display: flex;
-    justify-content:space-evenly;
+#seccionQuienesSomos {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-#QS-Container{
-    /* background-color: red; */
-    height: 100%;
-    width: 80%;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#QS-Container {
+  /* background-color: red; */
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#textoQS-Container{
-width: 40%;
-height: 80%;
-/* background-color: beige; */
-display: flex;
-flex-direction: column;
-justify-content:space-between;
-margin: 0%;
+#textoQS-Container {
+  width: 40%;
+  height: 80%;
+  /* background-color: beige; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0%;
 }
 
-h2{
-    color: #377448;
-    font-family: "Cormorant Garamond";
-    font-weight: bold;
-    /* margin-bottom: 10px; */
+h2 {
+  color: #377448;
+  font-family: "Cormorant Garamond";
+  font-weight: bold;
+  /* margin-bottom: 10px; */
 }
 
-p{
-    margin-bottom: 0;
+p {
+  margin-bottom: 0;
+}
+
+#seccionQOfrecemos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#QO-Container {
+  /* background-color: red; */
+  width: 62%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* --SECCION BLOQUES-- */
+
+.bloques-Section {
+  display: flex;
+  /* background-color: purple; */
+}
+
+#bloque1-Container {
+  /* background-color: rebeccapurple; */
+  width: 50vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blosques234-Container {
+  width: 50%;
+  /* background-color: red; */
+}
+
+#bloque2y3-Container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* background-color: #377448; */
+}
+
+#bloque2-Container {
+  width: 50vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bloque3-Container {
+  width: 50vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenidosBloques {
+  /* background-color: red; */
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- */
+
+#seccionForm{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#formContainer{
+border: 1px solid #377448;
+width: 30%;
+position: absolute;
+}
+
+/* Quitar flechas en Chrome, Safari, Edge y Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar flechas en Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
