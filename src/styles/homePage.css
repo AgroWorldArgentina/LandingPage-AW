@@ -1,15 +1,16 @@
-#seccioncarrusel {
+/* SECCION CARRUSEL */
+#carrusel_Seccion {
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 
-#tituloSuperpuesto {
-  position: absolute;
-  z-index: 15;
+#contenidoCarrusel {
   width: 80%;
   height: 100%;
+  position: absolute;
+  z-index: 15;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,69 +31,69 @@ h4 {
   margin: 40px 0px;
 }
 
-#btnOfreceTuLote {
+#btnOfreceLote {
+  font-family: "Poppins";
   background-color: #377448;
   color: white;
   font-weight: bold;
-  padding: 10px 25px;
   border-radius: 50px;
   border: 0px;
+  padding: 10px 25px;
   margin: 10px 0px;
 }
 
-#btnOfreceTuLote:hover {
+#btnOfreceLote:hover {
   background-color: transparent;
   border: 1px solid white;
 }
 
-/* --- */
+/* SECCION QUIENES SOMOS */
 
-#seccionQuienesSomos {
+#quienesSomos_Seccion {
   position: relative;
   display: flex;
   justify-content: space-evenly;
 }
 
-#QS-Container {
-  /* background-color: red; */
+#QS_Container {
   height: 100%;
   width: 80%;
   position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* background-color: red; */
 }
 
-#textoQS-Container {
+#textoQS_Container {
   width: 40%;
   height: 80%;
-  /* background-color: beige; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0%;
+  /* background-color: beige; */
 }
 
 h2 {
   color: #377448;
   font-family: "Cormorant Garamond";
-  font-weight: bold;
-  /* margin-bottom: 10px; */
+  font-weight: 600;
 }
 
 p {
   margin-bottom: 0;
 }
 
-#seccionQOfrecemos {
+/* SECCION QUE OFRECEMOS */
+
+#queOfrecemos_Seccion {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#QO-Container {
-  /* background-color: red; */
+#QO_Container {
   width: 62%;
   position: absolute;
   display: flex;
@@ -102,13 +103,11 @@ p {
 
 /* --SECCION BLOQUES-- */
 
-.bloques-Section {
+#bloques_Seccion {
   display: flex;
-  /* background-color: purple; */
 }
 
-#bloque1-Container {
-  /* background-color: rebeccapurple; */
+#bloque1_Container {
   width: 50vw;
   position: relative;
   display: flex;
@@ -116,19 +115,17 @@ p {
   justify-content: center;
 }
 
-#blosques234-Container {
+#blosque234_Container {
   width: 50%;
-  /* background-color: red; */
 }
 
-#bloque2y3-Container {
+#bloque2Y3_Container {
   width: 100%;
   height: fit-content;
   display: flex;
-  /* background-color: #377448; */
 }
 
-#bloque2-Container {
+.bloque2Y3 {
   width: 50vw;
   position: relative;
   display: flex;
@@ -136,16 +133,14 @@ p {
   justify-content: center;
 }
 
-#bloque3-Container {
-  width: 50vw;
+#bloque4_Container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.contenidosBloques {
-  /* background-color: red; */
+.contenido_Bloque {
   position: absolute;
   color: white;
   display: flex;
@@ -153,20 +148,84 @@ p {
   align-items: center;
 }
 
-/* --- */
+.iconos_Bloques {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 70px;
+}
 
-#seccionForm{
+/* SECCION COMO FUNCIONA */
+
+#comoFunciona_Seccion {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#CF_Container {
+  width: 75%;
+  height: 70%;
+  padding: 0%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
-#formContainer{
-border: 1px solid #377448;
-width: 30%;
-position: absolute;
+.progress-bar {
+  /* border: 3px solid #a8d146; */
+}
+
+.pasos_Container {
+  /* background-color: red; */
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.circulo-paso {
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: x-large;
+  border-radius: 50%;
+  border: 1.5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pasos_Contenido {
+  width: 65%;
+}
+
+/* SECCION OFRECE TU LOTE */
+
+#OLote_Seccion {
+  height: max-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#form_Container {
+  /* background-color: antiquewhite; */
+  width: 30%;
+  left: 13%;
+  position: absolute;
+}
+
+.formLabels {
+  color: #377448;
+}
+
+.formControls {
+  background-color: transparent;
+  border: 1px solid #76b35a;
 }
 
 /* Quitar flechas en Chrome, Safari, Edge y Opera */
@@ -177,6 +236,31 @@ input::-webkit-inner-spin-button {
 }
 
 /* Quitar flechas en Firefox */
-input[type=number] {
+/* input[type=number] {
   -moz-appearance: textfield;
+} */
+
+#btnEnviarInfo {
+  background-color: #377448;
+  border: none;
+  border-radius: 50px;
+  font-family: "Cormorant Garamond";
+  font-size: larger;
 }
+
+#btnEnviarInfo:hover {
+  background-color: transparent;
+  border: 1px solid #377448;
+  color: #377448;
+}
+
+#mapa_Container {
+  width: fit-content;
+  position: absolute;
+  right: 13%;
+  /* background-color: aqua; */
+}
+
+
+
+

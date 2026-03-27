@@ -1,35 +1,37 @@
-#headerContainer {
-  background-color: #377448;
-  height: 12vh;
+#header_Container {
   width: 100%;
+  height: 12vh;
+  color: white;
+  background-color: #377448;
   display: flex;
   justify-content: center;
-  color: white;
 }
 
-#logoContainer{
-    /* background-color: black; */
-    width: 5%;
-    height: 12vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#navbarContainer {
-  /* background-color: red; */
+#navbar_Container {
   width: 90%;
+}
+
+#links_Container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.logo_Container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
 }
 
 .navLinks {
   color: white;
-  margin: 0px 60px;
+  font-family: "Cormorant Garamond";
+  font-size: larger;
 }
 
-.navLinks:hover{
-    color: #76b35a;
+.navLinks:hover,
+.navLinks:active,
+.navLinks:focus {
+  color: #76b35a;
 }

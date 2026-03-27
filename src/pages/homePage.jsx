@@ -1,24 +1,72 @@
 import React, { useRef, useState } from "react";
-import { Carousel, Form, Col, Button } from "react-bootstrap";
+import { Carousel, Form, Button } from "react-bootstrap";
 import "../styles/homePage.css";
+
+// --Slides--
 import slide1 from "../assets/slide1.jpg";
 import slide2 from "../assets/slide2.jpg";
 import slide3 from "../assets/slide3.jpg";
 import slide4 from "../assets/slide4.jpg";
+import slide5 from "../assets/slide5.jpg";
+
+// --Quienes somos--
 import fondoQS from "../assets/fondoQS.jpg";
-import imgQS from "../assets/imgQS.JPG";
+import imgQS from "../assets/imgQS.jpg";
+
+// --Que ofrecemos--
 import fondoQO from "../assets/fondoQO.jpg";
 import bloque1 from "../assets/bloque1.jpg";
-import { PiTruckThin, PiPackageLight } from "react-icons/pi";
-import bloque2 from "../assets/bloque2copia.jpg";
-import { GiCoffeeBeans } from "react-icons/gi";
-import bloque3 from "../assets/bloque3copia.jpg";
+import bloque2 from "../assets/bloque2.jpg";
+import bloque3 from "../assets/bloque3.jpg";
 import bloque4 from "../assets/bloque4.jpg";
+import { PiTruckThin, PiPackageThin } from "react-icons/pi";
+import { GiCoffeeBeans } from "react-icons/gi";
+import icon4 from "../assets/gradientIcon.png";
+
+// --Como funciona--
 import imgCF from "../assets/imgCF.jpg";
-import fondoFORM from "../assets/fondoFORM.jpg";
+
+// --Formulario--
+import fondoOLote from "../assets/fondoOfreceLote.jpg";
 import emailjs from "@emailjs/browser";
 
 export default function HomePage() {
+  const [pasoActual, setPasoActual] = useState(1);
+
+  const pasosInfo = [
+    {
+      id: 1,
+      titulo: "1. Completá el formulario",
+      descripcion:
+        "Ingresá tus datos y la información básica del lote: ubicación, cantidad aproximada y tipo de poroto. Nuestro equipo recibe la información para comenzar a evaluarla.",
+    },
+
+    {
+      id: 2,
+      titulo: "2. Análisis de la mercadería",
+      descripcion:
+        "Nos contactamos con vos para conocer más detalles y, si es necesario, coordinamos el calado o análisis de la mercadería para evaluar su calidad.",
+    },
+
+    {
+      id: 3,
+      titulo: "3. Propuesta comercial",
+      descripcion:
+        "Con la información del lote y el análisis realizado, te presentamos una propuesta de precio y condiciones de compra.",
+    },
+
+    {
+      id: 4,
+      titulo: "4. Coordinación y retiro",
+      descripcion:
+        "Si avanzamos con la operación, coordinamos la logística para el retiro o traslado de la mercadería hacia nuestra planta.",
+    },
+  ];
+
+  const irAlPaso = (numero) => {
+    setPasoActual(numero);
+  };
+
   const form = useRef();
 
   const enviarEmail = (e) => {
@@ -45,48 +93,64 @@ export default function HomePage() {
 
   return (
     <section>
-      <section id="seccioncarrusel">
-        <div id="tituloSuperpuesto">
+      {/* --- */}
+
+      <section id="carrusel_Seccion">
+        <div id="contenidoCarrusel">
           <h1>
-            <p>¿TE INTERESA VENDER</p>
-            <p>TUS LOTES DE POROTOS?</p>
+            ¿TE INTERESA VENDER
+            <br />
+            TUS LOTES DE POROTOS?
           </h1>
+
           <h4>
-            <p>Enviá la información de tu lote y nuestro equipo evaluará</p>
-            <p>la propuesta para su posible comercialización.</p>
+            Enviá la información de tu lote y nuestro equipo evaluará
+            <br />
+            la propuesta para su posible comercialización.
           </h4>
+
           <button
-            id="btnOfreceTuLote"
+            id="btnOfreceLote"
             onClick={() =>
               document
-                .getElementById("seccionForm")
+                .getElementById("OLote_Seccion")
                 .scrollIntoView({ behavior: "smooth" })
             }
           >
             OFRECÉ TU LOTE
           </button>
         </div>
-        <Carousel fade>
+
+        <Carousel slide={false}>
           <Carousel.Item>
             <img src={slide1} alt="slide1" width={"100%"} />
           </Carousel.Item>
+
           <Carousel.Item>
             <img src={slide2} alt="slide2" width={"100%"} />
           </Carousel.Item>
+
           <Carousel.Item>
             <img src={slide3} alt="slide3" width={"100%"} />
           </Carousel.Item>
+
           <Carousel.Item>
             <img src={slide4} alt="slide4" width={"100%"} />
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <img src={slide5} alt="slide5" width={"100%"} />
           </Carousel.Item>
         </Carousel>
       </section>
 
-      <section id="seccionQuienesSomos">
-        <img src={fondoQS} alt="fondo ilustraciones 1" width={"100%"} />
+      {/* --- */}
 
-        <div id="QS-Container">
-          <div id="textoQS-Container">
+      <section id="quienesSomos_Seccion">
+        <img src={fondoQS} alt="fondo quienes somos" width={"100%"} />
+
+        <div id="QS_Container">
+          <div id="textoQS_Container">
             <h2>¿Quiénes Somos?</h2>
             <p style={{ color: "#377448", fontSize: "large" }}>
               Agro World Argentina es una empresa dedicada al procesamiento y
@@ -110,10 +174,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="seccionQOfrecemos">
-        <img src={fondoQO} alt="fondo ilustraciones QO" width={"100%"} />
+      {/* --- */}
 
-        <div id="QO-Container">
+      <section id="queOfrecemos_Seccion">
+        <img src={fondoQO} alt="fondo que ofrecemos" width={"100%"} />
+
+        <div id="QO_Container">
           <h2 style={{ marginBottom: "40px" }}>¿Qué Ofrecemos?</h2>
           <p>
             Nos especializamos en el acopio, procesamiento y comercialización de
@@ -126,78 +192,126 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bloques-Section">
-        <div id="bloque1-Container">
+      <section id="bloques_Seccion">
+        <div id="bloque1_Container">
           <img src={bloque1} alt="bloque1" width={"100%"} />
-          <div className="contenidosBloques">
-            <PiTruckThin
-              style={{ color: "white", marginBottom: "20px" }}
-              size={"80px"}
-            />
+          <div className="contenido_Bloque">
+            <PiTruckThin className="iconos_Bloques" />
             <p style={{ fontSize: "1.2rem" }}>RECEPCIÓN Y ACOPIO </p>
             <p style={{ fontSize: "1.2rem" }}>DE MERCADERÍA</p>
           </div>
         </div>
 
-        <div id="blosques234-Container">
-          <div id="bloque2y3-Container">
-            <div id="bloque2-Container">
+        <div id="blosque234_Container">
+          <div id="bloque2Y3_Container">
+            <div className="bloque2Y3">
               <img src={bloque2} alt="bloque2" width={"100%"} />
-              <div className="contenidosBloques">
-                <GiCoffeeBeans
-                  style={{ color: "white", marginBottom: "20px" }}
-                  size={"80px"}
-                />
+              <div className="contenido_Bloque">
+                <GiCoffeeBeans className="iconos_Bloques" />
                 <p style={{ fontSize: "1.2rem" }}>PROCESAMIENTO EN</p>
                 <p style={{ fontSize: "1.2rem" }}>PLANTA</p>
               </div>
             </div>
 
-            <div id="bloque3-Container">
+            <div className="bloque2Y3">
               <img src={bloque3} alt="bloque3" width={"100%"} />
-              <div className="contenidosBloques">
-                <PiPackageLight
-                  style={{ color: "white", marginBottom: "20px" }}
-                  size={"80px"}
-                />
+              <div className="contenido_Bloque">
+                <PiPackageThin className="iconos_Bloques" />
                 <p style={{ fontSize: "1.2rem" }}>LOGÍSTICA Y</p>
                 <p style={{ fontSize: "1.2rem" }}>TRANSPORTE</p>
               </div>
             </div>
           </div>
 
-          {/* <div>
-            <img src={bloque4} alt="bloque4" width={"30%"} />
-            <div className="contenidosBloques">
-              <GiCoffeeBeans
-                style={{ color: "white", marginBottom: "20px" }}
-                size={"50px"}
+          <div id="bloque4_Container">
+            <img src={bloque4} alt="bloque4" width={"100%"} />
+            <div className="contenido_Bloque">
+              <img
+                src={icon4}
+                alt="icono bloque 4"
+                width={"70px"}
+                style={{ marginBottom: "20px" }}
               />
-              <p>PROCESAMIENTO EN</p>
-              <p>PLANTA</p>
+              <p style={{ fontSize: "1.2rem" }}>EXPORTACIÓN</p>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
 
-      <section>
-        <img src={imgCF} alt="" width={"100%"} />
+      {/* --- */}
+
+      <section id="comoFunciona_Seccion">
+        <img src={imgCF} alt="imagen seccion como funciona" width={"100%"} />
+        <div id="CF_Container" className="container stepper-full-container">
+          <h2 style={{ color: "white" }}>¿Cómo Funciona?</h2>
+
+          <div className="stepper-visual-wrapper" style={{ width: "100%" }}>
+            <div className="progress-bar">
+              <div
+                className="progress-bar-fill"
+                style={{ width: `${(pasoActual - 1) * 33.33}%` }}
+              ></div>
+            </div>
+
+            <div className="pasos_Container">
+              {pasosInfo.map((paso) => (
+                <div
+                  key={paso.id}
+                  className={`circulo-paso ${pasoActual >= paso.id ? "activo" : ""}`}
+                  onClick={() => irAlPaso(paso.id)}
+                >
+                  {paso.id === 1 ? "I" : paso.id}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div
+            id="pasos_Contenido"
+            className="contenido-paso-wrapper text-center"
+          >
+            {pasosInfo
+              .filter((p) => p.id === pasoActual)
+              .map((infoPaso) => (
+                <div key={infoPaso.id}>
+                  <h5
+                    className="titulo-paso"
+                    style={{
+                      color: "white",
+                      fontWeight: "400",
+                      fontSize: "x-large",
+                      fontFamily: "Cormorant Garamond",
+                    }}
+                  >
+                    {infoPaso.titulo}
+                  </h5>
+                  <br />
+                  <p className="descripcion-paso" style={{ color: "white" }}>
+                    {infoPaso.descripcion}
+                  </p>
+                </div>
+              ))}
+          </div>
+        </div>
       </section>
 
-      <section id="seccionForm">
-        <img src={fondoFORM} alt="" width={"100%"} />
+      {/* --- */}
 
-        <div id="formContainer">
+      <section id="OLote_Seccion">
+        <img src={fondoOLote} alt="fondo seccion ofrece tu lote" width={"100%"} />
+
+        <div id="form_Container">
           <h2>Ofrecé Tu Lote De Porotos</h2>
-          <p>
+          <p style={{ color: "#377448", marginBottom: "15px" }}>
             Completá el formulario y nuestro equipo comercial evaluará tu
             propuesta.
           </p>
 
           <Form ref={form} onSubmit={enviarEmail}>
             <Form.Group className="mb-3" controlId="formGroupName">
-              <Form.Label>Nombre y Apellido</Form.Label>
+              {/* <Form.Label className="formLabels">Nombre y Apellido</Form.Label> */}
               <Form.Control
+                className="formControls"
                 type="text"
                 name="nombre_completo"
                 placeholder="Ingrese Nombre y Apellido"
@@ -206,19 +320,22 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupNumber">
-              <Form.Label>Teléfono / WhatsApp</Form.Label>
+              {/* <Form.Label className="formLabels">
+                Teléfono / WhatsApp
+              </Form.Label> */}
               <Form.Control
                 type="number"
                 name="telefono"
-                className="no-arrows"
+                className="no-arrows formControls"
                 placeholder="Ingrese Teléfono"
                 required
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Email</Form.Label>
+              {/* <Form.Label className="formLabels">Email</Form.Label> */}
               <Form.Control
+                className="formControls"
                 type="email"
                 name="email_contacto"
                 placeholder="Ingrese Email"
@@ -227,8 +344,11 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupProvincia">
-              <Form.Label>Provincia / Localidad</Form.Label>
+              {/* <Form.Label className="formLabels">
+                Provincia / Localidad
+              </Form.Label> */}
               <Form.Control
+                className="formControls"
                 type="text"
                 name="provincia_localidad"
                 placeholder="Ingrese Provincia / Localidad"
@@ -237,9 +357,12 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label className="d-block">Tipo de poroto</Form.Label>
+              <Form.Label className="d-block formLabels">
+                Tipo de poroto
+              </Form.Label>
 
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="Negro"
@@ -249,6 +372,7 @@ export default function HomePage() {
                 required
               />
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="Mung"
@@ -257,6 +381,7 @@ export default function HomePage() {
                 id="p2"
               />
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="Todas las anteriores"
@@ -267,18 +392,22 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupCantidad">
-              <Form.Label> Cantidad aproximada (toneladas)</Form.Label>
+              {/* <Form.Label className="formLabels">
+                Cantidad aproximada (toneladas)
+              </Form.Label> */}
               <Form.Control
+              
                 type="number"
                 name="cantidad_tn"
-                className="no-arrows"
-                placeholder="Ingrese cantidad"
+                className="no-arrows formControls"
+                placeholder="Ingrese Cantidad Aproximada (toneladas)"
                 required
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupProcNat">
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="Procesado"
@@ -288,6 +417,7 @@ export default function HomePage() {
                 required
               />
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="Natural"
@@ -298,9 +428,12 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-4" controlId="formGroupFechaCosecha">
-              <Form.Label className="d-block">Fecha de cosecha</Form.Label>
+              <Form.Label className="d-block formLabels">
+                Fecha de cosecha
+              </Form.Label>
 
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="2024"
@@ -310,6 +443,7 @@ export default function HomePage() {
                 required
               />
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="2025"
@@ -318,6 +452,7 @@ export default function HomePage() {
                 id="c2025"
               />
               <Form.Check
+                className="formLabels"
                 inline
                 type="radio"
                 label="2026"
@@ -327,10 +462,22 @@ export default function HomePage() {
               />
             </Form.Group>
 
-            <Button type="submit" className="w-100">
+            <Button type="submit" id="btnEnviarInfo" className="w-100">
               Enviar información
             </Button>
           </Form>
+        </div>
+
+        <div id="mapa_Container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.17339585515!2d-65.22188112475243!3d-26.897991576655944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225bfef67f7569%3A0x672eae20df173a14!2sAgro%20World%20Argentina%20S.R.L.!5e0!3m2!1ses!2sar!4v1774402684706!5m2!1ses!2sar"
+            width="450"
+            height="500"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
     </section>

@@ -11,7 +11,7 @@ export default function App() {
     <BrowserRouter>
       <HeaderComponent />
       <HomePage />
-      {/* <FooterComponent /> */}
+      <FooterComponent />
     </BrowserRouter>
   );
 }
