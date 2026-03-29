@@ -16,9 +16,13 @@ import imgQS from "../assets/imgQS.jpg";
 // --Que ofrecemos--
 import fondoQO from "../assets/fondoQO.jpg";
 import bloque1 from "../assets/bloque1.jpg";
+import b1Hover from "../assets/bloque1hover.jpg";
 import bloque2 from "../assets/bloque2.jpg";
+import b2Hover from "../assets/bloque2hover.jpg";
 import bloque3 from "../assets/bloque3.jpg";
+import b3Hover from "../assets/bloque3hover.jpg";
 import bloque4 from "../assets/bloque4.jpg";
+import b4Hover from "../assets/bloque4hover.jpg";
 import { PiTruckThin, PiPackageThin } from "react-icons/pi";
 import { GiCoffeeBeans } from "react-icons/gi";
 import icon4 from "../assets/gradientIcon.png";
@@ -192,39 +196,90 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="bloques_Seccion">
-        <div id="bloque1_Container">
-          <img src={bloque1} alt="bloque1" width={"100%"} />
+      <section id="section_Bloques" style={{ display: "flex" }}>
+        <div className="container_Bloque" style={{ width: "50vw" }}>
+          <img
+            src={bloque1}
+            alt="Recepción y acopio de mercadería"
+            width={"100%"}
+            className="img_Bloque"
+          />
           <div className="contenido_Bloque">
             <PiTruckThin className="iconos_Bloques" />
             <p style={{ fontSize: "1.2rem" }}>RECEPCIÓN Y ACOPIO </p>
             <p style={{ fontSize: "1.2rem" }}>DE MERCADERÍA</p>
           </div>
+          <div className="contenidoHover_Bloque">
+            <PiTruckThin className="iconos_Bloques" />
+            <p>RECEPCIÓN Y ACOPIO </p>
+            <p>DE MERCADERÍA</p>
+            <br />
+            <p style={{ margin: "0px 10px", fontSize: "12px" }}>
+              Recibimos lotes de porotos provenientes de distintas provincias y
+              coordinamos el retiro mediante nuestra flota de camiones.
+            </p>
+          </div>
         </div>
 
-        <div id="blosque234_Container">
-          <div id="bloque2Y3_Container">
-            <div className="bloque2Y3">
-              <img src={bloque2} alt="bloque2" width={"100%"} />
+        <div id="container_Bloque234" style={{ width: "50%" }}>
+          <div id="container_Bloque2y3">
+            <div className="container_Bloque" style={{ width: "50vw" }}>
+              <img
+                src={bloque2}
+                alt="Procesamiento en planta"
+                width={"100%"}
+                className="img_Bloque"
+              />
               <div className="contenido_Bloque">
                 <GiCoffeeBeans className="iconos_Bloques" />
                 <p style={{ fontSize: "1.2rem" }}>PROCESAMIENTO EN</p>
                 <p style={{ fontSize: "1.2rem" }}>PLANTA</p>
               </div>
+              <div className="contenidoHover_Bloque">
+                <GiCoffeeBeans className="iconos_Bloques" />
+                <p>PROCESAMIENTO EN</p>
+                <p>PLANTA</p>
+                <br />
+                <p style={{ fontSize: "12px" }}>
+                  Los porotos pasan por procesos de limpieza, clasificación y
+                  selección utilizando maquinaria especializada.
+                </p>
+              </div>
             </div>
 
-            <div className="bloque2Y3">
-              <img src={bloque3} alt="bloque3" width={"100%"} />
+            <div className="container_Bloque" style={{ width: "50vw" }}>
+              <img
+                src={bloque3}
+                alt="Logística y Transporte"
+                width={"100%"}
+                className="img_Bloque"
+              />
               <div className="contenido_Bloque">
                 <PiPackageThin className="iconos_Bloques" />
                 <p style={{ fontSize: "1.2rem" }}>LOGÍSTICA Y</p>
                 <p style={{ fontSize: "1.2rem" }}>TRANSPORTE</p>
               </div>
+              <div className="contenidoHover_Bloque">
+                <PiPackageThin className="iconos_Bloques" />
+                <p>LOGÍSTICA Y TRANSPORTE</p>
+                <br />
+                <p style={{ fontSize: "12px" }}>
+                  Disponemos de una flota de más de ocho camiones propios, lo
+                  que nos permite coordinar el retiro de mercadería desde
+                  distintas zonas productivas y garantizar su traslado eficiente
+                  hacia nuestras plantas de procesamiento.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div id="bloque4_Container">
-            <img src={bloque4} alt="bloque4" width={"100%"} />
+          <div className="container_Bloque">
+            <img
+              src={bloque4}
+              alt="Exportación"
+              width={"100%"}
+              className="img_Bloque"
+            />
             <div className="contenido_Bloque">
               <img
                 src={icon4}
@@ -233,6 +288,24 @@ export default function HomePage() {
                 style={{ marginBottom: "20px" }}
               />
               <p style={{ fontSize: "1.2rem" }}>EXPORTACIÓN</p>
+            </div>
+
+            <div className="contenidoHover_Bloque">
+              <img
+                src={icon4}
+                alt="icono bloque 4"
+                width={"70px"}
+                style={{ marginBottom: "20px" }}
+              />
+              <p>EXPORTACIÓN</p>
+              <br />
+              <p style={{ fontSize: "12px", margin: "0px 10px" }}>
+                La mercadería procesada se prepara para su envío a distintos
+                mercados internacionales cumpliendo con estándares de calidad.
+                Además, contamos con SENASA y aduana en planta, lo que nos
+                permite agilizar los procesos de control y despacho para
+                exportación.
+              </p>
             </div>
           </div>
         </div>
@@ -243,13 +316,26 @@ export default function HomePage() {
       <section id="comoFunciona_Seccion">
         <img src={imgCF} alt="imagen seccion como funciona" width={"100%"} />
         <div id="CF_Container" className="container stepper-full-container">
-          <h2 style={{ color: "white" }}>¿Cómo Funciona?</h2>
+          <h2 style={{ color: "white", fontWeight: "500" }}>¿Cómo Funciona?</h2>
 
-          <div className="stepper-visual-wrapper" style={{ width: "100%" }}>
+          <div
+            className={`stepper-visual-wrapper ${pasoActual >= 1 ? "paso-activo" : ""} ${pasoActual === 4 ? "paso-final" : ""}`} 
+          >
             <div className="progress-bar">
               <div
                 className="progress-bar-fill"
-                style={{ width: `${(pasoActual - 1) * 33.33}%` }}
+                style={{
+                  width:
+                    pasoActual === 1
+                      ? "15%"
+                      : pasoActual === 2
+                        ? "40%"
+                        : pasoActual === 3
+                          ? "60%"
+                          : pasoActual === 4
+                            ? "100%"
+                            : "0",
+                }}
               ></div>
             </div>
 
@@ -257,7 +343,7 @@ export default function HomePage() {
               {pasosInfo.map((paso) => (
                 <div
                   key={paso.id}
-                  className={`circulo-paso ${pasoActual >= paso.id ? "activo" : ""}`}
+                  className={`circulo-paso ${pasoActual >= paso.id && pasoActual !== 0 ? "activo" : ""}`}
                   onClick={() => irAlPaso(paso.id)}
                 >
                   {paso.id === 1 ? "I" : paso.id}
@@ -298,7 +384,11 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="OLote_Seccion">
-        <img src={fondoOLote} alt="fondo seccion ofrece tu lote" width={"100%"} />
+        <img
+          src={fondoOLote}
+          alt="fondo seccion ofrece tu lote"
+          width={"100%"}
+        />
 
         <div id="form_Container">
           <h2>Ofrecé Tu Lote De Porotos</h2>
@@ -396,7 +486,6 @@ export default function HomePage() {
                 Cantidad aproximada (toneladas)
               </Form.Label> */}
               <Form.Control
-              
                 type="number"
                 name="cantidad_tn"
                 className="no-arrows formControls"

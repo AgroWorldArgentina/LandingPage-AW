@@ -103,55 +103,67 @@ p {
 
 /* --SECCION BLOQUES-- */
 
-#bloques_Seccion {
-  display: flex;
-}
-
-#bloque1_Container {
-  width: 50vw;
+.container_Bloque {
   position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
-#blosque234_Container {
-  width: 50%;
-}
-
-#bloque2Y3_Container {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-}
-
-.bloque2Y3 {
-  width: 50vw;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#bloque4_Container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contenido_Bloque {
-  position: absolute;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.img_Bloque {
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .iconos_Bloques {
   color: white;
   margin-bottom: 20px;
   font-size: 70px;
+}
+
+.contenido_Bloque {
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.contenidoHover_Bloque {
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  background: rgba(55, 116, 72, 0.85);
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+
+  /* Efecto de entrada */
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 3;
+}
+
+.container_Bloque:hover .contenido_Bloque {
+  opacity: 0;
+}
+
+.container_Bloque:hover .contenidoHover_Bloque:hover {
+  opacity: 1;
+}
+
+#container_Bloque2y3 {
+  width: 100%;
+  height: fit-content;
+  display: flex;
 }
 
 /* SECCION COMO FUNCIONA */
@@ -174,29 +186,91 @@ p {
   justify-content: space-between;
 }
 
+.stepper-visual-wrapper {
+  /* background-color: aqua; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 90%;
+}
+
+.stepper-visual-wrapper::before,
+.stepper-visual-wrapper::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+.stepper-visual-wrapper::before {
+  left: 0px;
+}
+.stepper-visual-wrapper::after {
+  right: 0px;
+}
+
+.stepper-visual-wrapper.paso-activo::before {
+  background-color: #a8d146;
+}
+
+.stepper-visual-wrapper.paso-final::after {
+  background-color: #a8d146;
+}
+
 .progress-bar {
-  /* border: 3px solid #a8d146; */
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  z-index: 1;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #a8d146;
+  transition: width 0.5s ease-in-out;
 }
 
 .pasos_Container {
   /* background-color: red; */
-  width: 100%;
-  height: 50px;
+  width: 90%;
+  position: absolute;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 2;
 }
 
 .circulo-paso {
-  width: 40px;
-  height: 40px;
-  color: white;
-  font-size: x-large;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   border: 1.5px solid white;
+  color: white;
+  background-color: transparent;
+  /* background-color: white; */
+  font-size: x-large;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Clase cuando el paso está activo o ya pasó */
+.circulo-paso.activo {
+  background-color: #a8d146;
+  border-color: #a8d146;
+  color: #377448;
+  box-shadow: 0 0 0 10px rgba(55, 116, 72, 0.5);
 }
 
 #pasos_Contenido {
@@ -260,7 +334,3 @@ input::-webkit-inner-spin-button {
   right: 13%;
   /* background-color: aqua; */
 }
-
-
-
-
