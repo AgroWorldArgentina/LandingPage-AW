@@ -199,7 +199,7 @@ p {
   #textoQS_Container {
     width: 90%;
     padding: 0px 0px 30px 0px;
-    background-color: pink;
+    /* background-color: pink; */
     /* Agregado */
     font-size: 0.9rem;
   }
