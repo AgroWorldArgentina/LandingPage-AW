@@ -10,7 +10,7 @@ import slide4 from "../assets/slide4.jpg";
 import slide5 from "../assets/slide5.jpg";
 
 // --Quienes somos--
-import imgQS from "../assets/imgQS.JPG";
+import imgQS from "../assets/imgQS.jpg";
 
 // --Que ofrecemos--
 import bloque1 from "../assets/bloque1.jpg";
