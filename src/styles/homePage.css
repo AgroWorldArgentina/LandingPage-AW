@@ -56,37 +56,56 @@ h4 {
 }
 
 @media (max-width: 768px) {
+  #carrusel_Seccion {
+    height: 400px;
+  }
+
+  #carrusel_Seccion .carousel,
+  #carrusel_Seccion .carousel-inner,
+  #carrusel_Seccion .carousel-item,
+  #carrusel_Seccion .carousel-item img {
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  #contenidoCarrusel {
+    width: 90%;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
   h4 {
+    font-size: 1.1rem;
     margin: 15px 0px;
   }
 
   #btnOfreceLote {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 8px 20px;
   }
 }
 
-@media (max-width: 500px) {
-  #btnOfreceLote {
-    font-size: 0.6rem;
-    padding: 8px 15px;
-  }
-}
-
-@media (max-width: 426px) {
-  h4 {
-    margin: 8px 0px;
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 370px) {
+@media (max-width: 448px) {
   h1 {
-    font-size: 1rem;
+    font-size: 1.8rem !important;
+  }
+
+  h4 {
+    margin: 25px 0px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 1.6rem !important;
   }
 
   #btnOfreceLote {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -171,16 +190,18 @@ p {
     text-align: center;
   }
 
-   #imgQS_Container {
+  #imgQS_Container {
     justify-content: center;
   }
-
 }
 
 @media (max-width: 768px) {
   #textoQS_Container {
-    width: 85%;
+    width: 90%;
     padding: 0px 0px 30px 0px;
+    background-color: pink;
+    /* Agregado */
+    font-size: 0.9rem;
   }
 }
 
@@ -455,6 +476,10 @@ p {
 }
 
 @media (max-width: 800px) {
+  #comoFunciona_Seccion {
+    padding: 40px 0px;
+  }
+  
   #CF_Container {
     width: 85%;
     height: auto;
@@ -467,17 +492,18 @@ p {
   #CF_Container h2 {
     width: 100%;
     text-align: center;
+    margin-bottom: 20px;
     /* background-color: aqua; */
   }
 
   .stepper-visual-wrapper {
     flex-direction: column;
     width: 50px;
-    height: 400px;
+    height: 300px;
     position: relative;
+    margin: 20px 0;
   }
 
-  /* Ajustamos los puntitos decorativos para que queden arriba y abajo */
   .stepper-visual-wrapper::before {
     top: 0;
     left: 50%;
@@ -518,7 +544,7 @@ p {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    padding: 45px 0;
+    padding: 35px 0;
     box-sizing: border-box;
   }
 
@@ -538,7 +564,7 @@ p {
   }
 
   .titulo-paso {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
   }
 }
 
@@ -612,7 +638,7 @@ input::-webkit-inner-spin-button {
 
 @media (max-width: 800px) {
   #OLote_Seccion {
-    flex-direction: column; 
+    flex-direction: column;
     padding: 40px 0px;
     height: auto;
   }

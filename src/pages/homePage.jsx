@@ -405,11 +405,6 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="OLote_Seccion">
-        {/* <img
-          src={fondoOLote}
-          alt="fondo seccion ofrece tu lote"
-          width={"100%"}
-        /> */}
 
         <div id="form_Container">
           <h2>Ofrecé Tu Lote De Porotos</h2>
