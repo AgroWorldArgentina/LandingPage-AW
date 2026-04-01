@@ -1,5 +1,5 @@
 import { Nav, Navbar } from "react-bootstrap";
-import logoAgroW from "../assets/logoagroworld.png";
+import isotipoAW from "../assets/isotipoAW.png";
 import "../styles/headerComponent.css";
 
 export default function HeaderComponent() {
@@ -11,15 +11,16 @@ export default function HeaderComponent() {
   };
 
   return (
-    <Navbar id="header_Container" expand="lg">
+    <Navbar id="header_Container" expand="md" variant="dark">
       <div id="navbar_Container">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav id="links_Container">
-            <div className="logo_Container">
-              <img src={logoAgroW} alt="logoAgroWorld" width={"50px"} />
-            </div>
+        <Navbar.Brand href="#" className="logo_Container">
+          <img src={isotipoAW} alt="Isotipo Agro World Argentina" width={"50px"} />
+        </Navbar.Brand>
 
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+        <Navbar.Collapse id="basic-navbar-nav" className="w-100">
+          <Nav id="links_Container" className="ms-auto">
             <Nav.Link
               onClick={() => handleScroll("quienesSomos_Seccion")}
               className="navLinks"

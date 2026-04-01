@@ -1,4 +1,5 @@
-import logoAgroW from "../assets/logoagroworld.png";
+// import logoAgroW from "../assets/logoagroworld.png";
+import logotipoAW from "../assets/logotipoAW.png";
 import "../styles/footerComponent.css";
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri";
 import { CiLocationOn, CiMail } from "react-icons/ci";
@@ -17,26 +18,27 @@ export default function FooterComponent() {
         <div className="logo_Container">
           <button style={{border:"none", backgroundColor:"transparent"}}>
             <img
-              src={logoAgroW}
+              src={logotipoAW}
               alt="logoAgroWorld"
-              width={"50px"}
+              width={"80px"}
+              id="logotipoAW"
               onClick={() => handleScroll("header_Container")}
             />
           </button>
         </div>
 
         <div className="iconos_Container">
-          <CiLocationOn style={{ color: "#a8d146" }} />
+          <CiLocationOn style={{ color: "#a8d146" }} className="iconoFooter" />
           <p>Tucumán, Argentina</p>
         </div>
 
         <div className="iconos_Container">
-          <CiMail style={{ color: "#a8d146" }} />
+          <CiMail style={{ color: "#a8d146" }} className="iconoFooter" />
           <p>agroworldargentina.redes@gmail.com</p>
         </div>
 
         <div className="iconos_Container">
-          <BsTelephone style={{ color: "#a8d146" }} />
+          <BsTelephone style={{ color: "#a8d146" }} className="iconoFooter" />
           <p>+54 9 381 350 - 2309</p>
         </div>
 

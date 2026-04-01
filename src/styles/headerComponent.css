@@ -1,27 +1,31 @@
 #header_Container {
-  width: 100%;
-  height: 12vh;
-  color: white;
   background-color: #377448;
+  width: 100%;
+  min-height: 8vh;
   display: flex;
   justify-content: center;
-}
-
-#navbar_Container {
-  width: 90%;
-}
-
-#links_Container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
+#navbar_Container {
+  /* background-color: tomato; */
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#links_Container {
+  /* background-color: grey; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo_Container {
+  /* background-color: wheat; */
   width: fit-content;
   height: fit-content;
-  display: flex;
 }
 
 .navLinks {
@@ -34,4 +38,15 @@
 .navLinks:active,
 .navLinks:focus {
   color: #76b35a;
+}
+
+@media (max-width: 768px) {
+  #navbar_Container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #links_Container {
+    align-items: center;
+  }
 }

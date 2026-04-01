@@ -23,6 +23,7 @@ import bloque3 from "../assets/bloque3.jpg";
 import b3Hover from "../assets/bloque3hover.jpg";
 import bloque4 from "../assets/bloque4.jpg";
 import b4Hover from "../assets/bloque4hover.jpg";
+import bloque42 from "../assets/bloque4.2.jpg";
 import { PiTruckThin, PiPackageThin } from "react-icons/pi";
 import { GiCoffeeBeans } from "react-icons/gi";
 import icon4 from "../assets/gradientIcon.png";
@@ -108,9 +109,8 @@ export default function HomePage() {
           </h1>
 
           <h4>
-            Enviá la información de tu lote y nuestro equipo evaluará
-            <br />
-            la propuesta para su posible comercialización.
+            Enviá la información de tu lote y nuestro equipo evaluará la
+            propuesta para su posible comercialización.
           </h4>
 
           <button
@@ -125,7 +125,7 @@ export default function HomePage() {
           </button>
         </div>
 
-        <Carousel slide={false}>
+        <Carousel slide={false} indicators={false} fade={true}>
           <Carousel.Item>
             <img src={slide1} alt="slide1" width={"100%"} />
           </Carousel.Item>
@@ -151,16 +151,22 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="quienesSomos_Seccion">
-        <img src={fondoQS} alt="fondo quienes somos" width={"100%"} />
+        {/* <img src={fondoQS} alt="fondo quienes somos" width={"100%"} /> */}
 
         <div id="QS_Container">
           <div id="textoQS_Container">
             <h2>¿Quiénes Somos?</h2>
-            <p style={{ color: "#377448", fontSize: "large" }}>
+            <p
+              style={{
+                color: "#377448",
+                fontSize: "1.1rem",
+                marginBottom: "30px",
+              }}
+            >
               Agro World Argentina es una empresa dedicada al procesamiento y
               exportación de porotos desde el año 1996.
             </p>
-            <p>
+            <p style={{ marginBottom: "30px" }}>
               Contamos con plantas de procesamiento y una flota de más de ocho
               camiones que nos permite retirar y acopiar la mercadería
               directamente desde su origen. Posteriormente, el producto es
@@ -172,8 +178,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div>
-            <img src={imgQS} alt="imagen quienes somos" width={"550px"} />
+          <div id="imgQS_Container">
+            <img id="imgQS" src={imgQS} alt="imagen quienes somos" />
           </div>
         </div>
       </section>
@@ -181,7 +187,7 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="queOfrecemos_Seccion">
-        <img src={fondoQO} alt="fondo que ofrecemos" width={"100%"} />
+        {/* <img src={fondoQO} alt="fondo que ofrecemos" width={"100%"} /> */}
 
         <div id="QO_Container">
           <h2 style={{ marginBottom: "40px" }}>¿Qué Ofrecemos?</h2>
@@ -196,8 +202,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="section_Bloques" style={{ display: "flex" }}>
-        <div className="container_Bloque" style={{ width: "50vw" }}>
+      <section id="section_Bloques">
+        <div className="container_Bloque bloque_1">
           <img
             src={bloque1}
             alt="Recepción y acopio de mercadería"
@@ -214,16 +220,18 @@ export default function HomePage() {
             <p>RECEPCIÓN Y ACOPIO </p>
             <p>DE MERCADERÍA</p>
             <br />
-            <p style={{ margin: "0px 10px", fontSize: "12px" }}>
-              Recibimos lotes de porotos provenientes de distintas provincias y
-              coordinamos el retiro mediante nuestra flota de camiones.
-            </p>
+            <div className="textoHover">
+              <p>
+                Recibimos lotes de porotos provenientes de distintas provincias
+                y coordinamos el retiro mediante nuestra flota de camiones.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div id="container_Bloque234" style={{ width: "50%" }}>
+        <div id="container_Bloque234">
           <div id="container_Bloque2y3">
-            <div className="container_Bloque" style={{ width: "50vw" }}>
+            <div className="container_Bloque">
               <img
                 src={bloque2}
                 alt="Procesamiento en planta"
@@ -240,14 +248,16 @@ export default function HomePage() {
                 <p>PROCESAMIENTO EN</p>
                 <p>PLANTA</p>
                 <br />
-                <p style={{ fontSize: "12px" }}>
-                  Los porotos pasan por procesos de limpieza, clasificación y
-                  selección utilizando maquinaria especializada.
-                </p>
+                <div className="textoHover">
+                  <p>
+                    Los porotos pasan por procesos de limpieza, clasificación y
+                    selección utilizando maquinaria especializada.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="container_Bloque" style={{ width: "50vw" }}>
+            <div className="container_Bloque">
               <img
                 src={bloque3}
                 alt="Logística y Transporte"
@@ -263,12 +273,14 @@ export default function HomePage() {
                 <PiPackageThin className="iconos_Bloques" />
                 <p>LOGÍSTICA Y TRANSPORTE</p>
                 <br />
-                <p style={{ fontSize: "12px" }}>
-                  Disponemos de una flota de más de ocho camiones propios, lo
-                  que nos permite coordinar el retiro de mercadería desde
-                  distintas zonas productivas y garantizar su traslado eficiente
-                  hacia nuestras plantas de procesamiento.
-                </p>
+                <div className="textoHover">
+                  <p>
+                    Disponemos de una flota de más de ocho camiones propios, lo
+                    que nos permite coordinar el retiro de mercadería desde
+                    distintas zonas productivas y garantizar su traslado
+                    eficiente hacia nuestras plantas de procesamiento.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -278,8 +290,15 @@ export default function HomePage() {
               src={bloque4}
               alt="Exportación"
               width={"100%"}
-              className="img_Bloque"
+              className="img_Bloque d-none-mobile"
             />
+
+            <img
+              src={bloque42}
+              alt="Exportación"
+              className="img_Bloque d-block-mobile"
+            />
+
             <div className="contenido_Bloque">
               <img
                 src={icon4}
@@ -299,13 +318,15 @@ export default function HomePage() {
               />
               <p>EXPORTACIÓN</p>
               <br />
-              <p style={{ fontSize: "12px", margin: "0px 10px" }}>
-                La mercadería procesada se prepara para su envío a distintos
-                mercados internacionales cumpliendo con estándares de calidad.
-                Además, contamos con SENASA y aduana en planta, lo que nos
-                permite agilizar los procesos de control y despacho para
-                exportación.
-              </p>
+              <div className="textoHover">
+                <p>
+                  La mercadería procesada se prepara para su envío a distintos
+                  mercados internacionales cumpliendo con estándares de calidad.
+                  Además, contamos con SENASA y aduana en planta, lo que nos
+                  permite agilizar los procesos de control y despacho para
+                  exportación.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -314,27 +335,40 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="comoFunciona_Seccion">
-        <img src={imgCF} alt="imagen seccion como funciona" width={"100%"} />
         <div id="CF_Container" className="container stepper-full-container">
           <h2 style={{ color: "white", fontWeight: "500" }}>¿Cómo Funciona?</h2>
 
           <div
-            className={`stepper-visual-wrapper ${pasoActual >= 1 ? "paso-activo" : ""} ${pasoActual === 4 ? "paso-final" : ""}`} 
+            className={`stepper-visual-wrapper ${pasoActual >= 1 ? "paso-activo" : ""} ${pasoActual === 4 ? "paso-final" : ""}`}
           >
             <div className="progress-bar">
               <div
                 className="progress-bar-fill"
                 style={{
                   width:
-                    pasoActual === 1
-                      ? "15%"
-                      : pasoActual === 2
-                        ? "40%"
-                        : pasoActual === 3
-                          ? "60%"
-                          : pasoActual === 4
-                            ? "100%"
-                            : "0",
+                    window.innerWidth > 800
+                      ? pasoActual === 1
+                        ? "15%"
+                        : pasoActual === 2
+                          ? "40%"
+                          : pasoActual === 3
+                            ? "60%"
+                            : pasoActual === 4
+                              ? "100%"
+                              : "0"
+                      : "100%",
+                  height:
+                    window.innerWidth <= 800
+                      ? pasoActual === 1
+                        ? "15%"
+                        : pasoActual === 2
+                          ? "40%"
+                          : pasoActual === 3
+                            ? "60%"
+                            : pasoActual === 4
+                              ? "100%"
+                              : "0"
+                      : "100%",
                 }}
               ></div>
             </div>
@@ -384,11 +418,11 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="OLote_Seccion">
-        <img
+        {/* <img
           src={fondoOLote}
           alt="fondo seccion ofrece tu lote"
           width={"100%"}
-        />
+        /> */}
 
         <div id="form_Container">
           <h2>Ofrecé Tu Lote De Porotos</h2>
