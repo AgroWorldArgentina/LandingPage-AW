@@ -10,29 +10,29 @@ import slide4 from "../assets/slide4.jpg";
 import slide5 from "../assets/slide5.jpg";
 
 // --Quienes somos--
-import fondoQS from "../assets/fondoQS.jpg";
+// import fondoQS from "../assets/fondoQS.jpg";
 import imgQS from "../assets/imgQS.jpg";
 
 // --Que ofrecemos--
-import fondoQO from "../assets/fondoQO.jpg";
+// import fondoQO from "../assets/fondoQO.jpg";
 import bloque1 from "../assets/bloque1.jpg";
-import b1Hover from "../assets/bloque1hover.jpg";
+// import b1Hover from "../assets/bloque1hover.jpg";
 import bloque2 from "../assets/bloque2.jpg";
-import b2Hover from "../assets/bloque2hover.jpg";
+// import b2Hover from "../assets/bloque2hover.jpg";
 import bloque3 from "../assets/bloque3.jpg";
-import b3Hover from "../assets/bloque3hover.jpg";
+// import b3Hover from "../assets/bloque3hover.jpg";
 import bloque4 from "../assets/bloque4.jpg";
-import b4Hover from "../assets/bloque4hover.jpg";
+// import b4Hover from "../assets/bloque4hover.jpg";
 import bloque42 from "../assets/bloque4.2.jpg";
 import { PiTruckThin, PiPackageThin } from "react-icons/pi";
 import { GiCoffeeBeans } from "react-icons/gi";
 import icon4 from "../assets/gradientIcon.png";
 
 // --Como funciona--
-import imgCF from "../assets/imgCF.jpg";
+// import imgCF from "../assets/imgCF.jpg";
 
 // --Formulario--
-import fondoOLote from "../assets/fondoOfreceLote.jpg";
+// import fondoOLote from "../assets/fondoOfreceLote.jpg";
 import emailjs from "@emailjs/browser";
 
 export default function HomePage() {
@@ -151,7 +151,6 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="quienesSomos_Seccion">
-        {/* <img src={fondoQS} alt="fondo quienes somos" width={"100%"} /> */}
 
         <div id="QS_Container">
           <div id="textoQS_Container">
@@ -187,8 +186,6 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="queOfrecemos_Seccion">
-        {/* <img src={fondoQO} alt="fondo que ofrecemos" width={"100%"} /> */}
-
         <div id="QO_Container">
           <h2 style={{ marginBottom: "40px" }}>¿Qué Ofrecemos?</h2>
           <p>

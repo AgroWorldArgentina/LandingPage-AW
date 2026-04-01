@@ -1,4 +1,3 @@
-// import logoAgroW from "../assets/logoagroworld.png";
 import logotipoAW from "../assets/logotipoAW.png";
 import "../styles/footerComponent.css";
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri";

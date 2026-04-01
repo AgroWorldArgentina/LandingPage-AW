@@ -31,7 +31,6 @@ h4 {
   margin: 40px 0px;
   font-family: "Cormorant Garamond";
   font-size: clamp(0.8rem, 3vw, 1.5rem);
-  /* background-color: aqua; */
 }
 
 #btnOfreceLote {
@@ -53,7 +52,6 @@ h4 {
 @media (max-width: 1100px) {
   h4 {
     width: 80%;
-    /* background-color: pink; */
   }
 }
 
@@ -63,14 +61,15 @@ h4 {
   }
 
   #btnOfreceLote {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 8px 20px;
   }
 }
 
 @media (max-width: 500px) {
   #btnOfreceLote {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    padding: 8px 15px;
   }
 }
 
@@ -82,9 +81,13 @@ h4 {
 }
 
 @media (max-width: 370px) {
- h1{
-  font-size: 1rem;
- }
+  h1 {
+    font-size: 1rem;
+  }
+
+  #btnOfreceLote {
+    font-size: 0.4rem;
+  }
 }
 
 /* SECCION QUIENES SOMOS */
@@ -92,7 +95,7 @@ h4 {
 #quienesSomos_Seccion {
   width: 100%;
   min-height: auto;
-  padding: 60px 0px;
+  padding: 50px 0px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -103,7 +106,6 @@ h4 {
 }
 
 #QS_Container {
-  /* height: 100%; */
   width: 85%;
   display: flex;
   justify-content: space-between;
@@ -133,6 +135,7 @@ p {
 #imgQS_Container {
   display: flex;
   justify-content: center;
+  /* background-color: pink; */
 }
 
 #imgQS {
@@ -142,6 +145,10 @@ p {
 }
 
 @media (max-width: 1100px) {
+  #imgQS_Container {
+    justify-content: end;
+  }
+
   #imgQS {
     width: 90%;
   }
@@ -163,11 +170,16 @@ p {
     padding: 0px 0px 30px 0px;
     text-align: center;
   }
+
+   #imgQS_Container {
+    justify-content: center;
+  }
+
 }
 
 @media (max-width: 768px) {
   #textoQS_Container {
-    width: 90%;
+    width: 85%;
     padding: 0px 0px 30px 0px;
   }
 }
@@ -263,8 +275,6 @@ p {
   padding: 20px;
   justify-content: center;
   text-align: center;
-
-  /* Efecto de entrada */
   opacity: 0;
   transition: all 0.4s ease-in-out;
   z-index: 3;
@@ -286,7 +296,6 @@ p {
 
 #container_Bloque2y3 {
   width: 100%;
-  /* height: fit-content; */
   display: flex;
 }
 
@@ -302,7 +311,6 @@ p {
 
 @media (max-width: 800px) {
   #section_Bloques {
-    /* width: 100%; */
     flex-direction: column;
   }
 
@@ -312,7 +320,6 @@ p {
 
   #container_Bloque2y3 {
     flex-direction: column;
-    /* width: 100%; */
   }
 
   .textoHover {
@@ -451,13 +458,12 @@ p {
   #CF_Container {
     width: 85%;
     height: auto;
-    flex-direction: row; /* Stepper a la izquierda, texto a la derecha */
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     /* background-color: orange; */
   }
 
-  /* El título lo dejamos arriba ocupando todo el ancho */
   #CF_Container h2 {
     width: 100%;
     text-align: center;
@@ -512,8 +518,6 @@ p {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    /* CLAVE: Añadimos padding arriba y abajo para que los 
-       círculos no tapen los extremos de la barra */
     padding: 45px 0;
     box-sizing: border-box;
   }
@@ -555,7 +559,6 @@ p {
 #form_Container {
   /* background-color: antiquewhite; */
   width: 30%;
-  /* left: 13%; */
   position: relative;
 }
 
@@ -575,11 +578,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Quitar flechas en Firefox */
-/* input[type=number] {
-  -moz-appearance: textfield;
-} */
-
 #btnEnviarInfo {
   background-color: #377448;
   border: none;
@@ -597,7 +595,6 @@ input::-webkit-inner-spin-button {
 #mapa_Container {
   width: fit-content;
   position: relative;
-  /* right: 13%; */
   /* background-color: aqua; */
 }
 
@@ -615,9 +612,9 @@ input::-webkit-inner-spin-button {
 
 @media (max-width: 800px) {
   #OLote_Seccion {
-    flex-direction: column; /* Apila Formulario y Mapa */
+    flex-direction: column; 
     padding: 40px 0px;
-    height: auto; /* La sección crece según el contenido */
+    height: auto;
   }
 
   #form_Container {
