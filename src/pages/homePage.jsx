@@ -178,7 +178,7 @@ export default function HomePage() {
       <section id="queOfrecemos_Seccion">
         <div id="QO_Container">
           <h2 style={{ marginBottom: "40px" }}>¿Qué Ofrecemos?</h2>
-          <p>
+          <p id="p_QO">
             Nos especializamos en el acopio, procesamiento y comercialización de
             porotos provenientes de distintas regiones productivas de Argentina.
             A través de nuestra infraestructura, logística y experiencia en el

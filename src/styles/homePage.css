@@ -57,7 +57,7 @@ h4 {
 
 @media (max-width: 768px) {
   #carrusel_Seccion {
-    height: 400px;
+    height: 500px;
   }
 
   #carrusel_Seccion .carousel,
@@ -71,6 +71,7 @@ h4 {
   #contenidoCarrusel {
     width: 90%;
     height: 100%;
+    /* background-color: pink; */
   }
 
   h1 {
@@ -79,7 +80,7 @@ h4 {
 
   h4 {
     font-size: 1.1rem;
-    margin: 15px 0px;
+    margin: 35px 0px;
   }
 
   #btnOfreceLote {
@@ -90,22 +91,19 @@ h4 {
 
 @media (max-width: 448px) {
   h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.9rem !important;
   }
 
   h4 {
-    margin: 25px 0px;
+    margin: 30px 0px;
     font-size: 0.9rem;
+    /* background-color: orange; */
   }
 }
 
 @media (max-width: 390px) {
   h1 {
     font-size: 1.6rem !important;
-  }
-
-  #btnOfreceLote {
-    font-size: 0.7rem;
   }
 }
 
@@ -237,6 +235,10 @@ p {
 @media (max-width: 768px) {
   #QO_Container {
     width: 80%;
+  }
+
+  #p_QO{
+    font-size: 0.9rem;
   }
 }
 
@@ -475,7 +477,7 @@ p {
   width: 65%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 650px) {
   #comoFunciona_Seccion {
     padding: 40px 0px;
   }
@@ -499,7 +501,7 @@ p {
   .stepper-visual-wrapper {
     flex-direction: column;
     width: 50px;
-    height: 300px;
+    height: 320px;
     position: relative;
     margin: 20px 0;
   }
