@@ -316,7 +316,9 @@ export default function HomePage() {
 
       <section id="comoFunciona_Seccion">
         <div id="CF_Container" className="container stepper-full-container">
-          <h2 id="tittle_desktop" style={{ color: "white", fontWeight: "500" }}>¿Cómo Funciona?</h2>
+          <h2 id="tittle_desktop" style={{ color: "white", fontWeight: "500" }}>
+            ¿Cómo Funciona?
+          </h2>
 
           <div
             className={`stepper-visual-wrapper ${pasoActual >= 1 ? "paso-activo" : ""} ${pasoActual === 4 ? "paso-final" : ""}`}
@@ -370,7 +372,10 @@ export default function HomePage() {
             id="pasos_Contenido"
             className="contenido-paso-wrapper text-center"
           >
-            <h2 id="tittle_mobile" style={{ color: "white", fontWeight: "500" }}>
+            <h2
+              id="tittle_mobile"
+              style={{ color: "white", fontWeight: "500" }}
+            >
               ¿Cómo Funciona?
             </h2>
             {pasosInfo

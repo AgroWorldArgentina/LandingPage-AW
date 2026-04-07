@@ -43,6 +43,7 @@ h4 {
   border: 0px;
   padding: 10px 25px;
   margin: 10px 0px;
+  pointer-events: auto;
 }
 
 #btnOfreceLote:hover {
@@ -106,7 +107,7 @@ h4 {
     font-size: 1.6rem !important;
   }
 
-    h4 {
+  h4 {
     margin: 30px 0px;
     font-size: 1.1rem;
   }
@@ -152,10 +153,10 @@ p {
   margin-bottom: 0;
 }
 
-#textoQS_color{
-color: #377448;
-font-size: 1.1rem;
-margin-bottom: 30px;
+#textoQS_color {
+  color: #377448;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
 
 #imgQS_Container {
@@ -207,7 +208,6 @@ margin-bottom: 30px;
     padding: 0px 0px 30px 0px;
     font-size: 0.9rem;
   }
-  
 }
 
 @media (max-width: 400px) {
@@ -215,9 +215,9 @@ margin-bottom: 30px;
     font-size: 0.9rem;
   }
 
-   #textoQS_Container{
+  #textoQS_Container {
     font-size: 0.8rem;
-   }
+  }
 }
 
 /* SECCION QUE OFRECEMOS */
@@ -254,7 +254,7 @@ margin-bottom: 30px;
     width: 80%;
   }
 
-  #p_QO{
+  #p_QO {
     font-size: 0.9rem;
   }
 }
@@ -399,7 +399,7 @@ margin-bottom: 30px;
   justify-content: space-between;
 }
 
-#tittle_mobile{
+#tittle_mobile {
   display: none;
 }
 
@@ -494,25 +494,25 @@ margin-bottom: 30px;
 }
 
 @media (max-width: 650px) {
-#tittle_desktop{
-  display: none;
-}
+  #tittle_desktop {
+    display: none;
+  }
 
-#pasos_Contenido{
-  display: flex;
-  flex-direction: column;
-  height: 320px;
-}
+  #pasos_Contenido {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+  }
 
-#tittle_mobile{
-  display: block;
-  margin-bottom: 80px;
-}
+  #tittle_mobile {
+    display: block;
+    margin-bottom: 80px;
+  }
 
   #comoFunciona_Seccion {
     padding: 40px 0px;
   }
-  
+
   #CF_Container {
     width: 85%;
     height: auto;
@@ -588,7 +588,6 @@ margin-bottom: 30px;
     align-items: center;
     min-height: 200px;
     font-size: 14px;
-
   }
 
   .titulo-paso {
