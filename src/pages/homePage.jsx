@@ -141,17 +141,10 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="quienesSomos_Seccion">
-
         <div id="QS_Container">
           <div id="textoQS_Container">
             <h2>¿Quiénes Somos?</h2>
-            <p
-              style={{
-                color: "#377448",
-                fontSize: "1.1rem",
-                marginBottom: "30px",
-              }}
-            >
+            <p id="textoQS_color">
               Agro World Argentina es una empresa dedicada al procesamiento y
               exportación de porotos desde el año 1996.
             </p>
@@ -323,7 +316,7 @@ export default function HomePage() {
 
       <section id="comoFunciona_Seccion">
         <div id="CF_Container" className="container stepper-full-container">
-          <h2 style={{ color: "white", fontWeight: "500" }}>¿Cómo Funciona?</h2>
+          <h2 id="tittle_desktop" style={{ color: "white", fontWeight: "500" }}>¿Cómo Funciona?</h2>
 
           <div
             className={`stepper-visual-wrapper ${pasoActual >= 1 ? "paso-activo" : ""} ${pasoActual === 4 ? "paso-final" : ""}`}
@@ -377,6 +370,9 @@ export default function HomePage() {
             id="pasos_Contenido"
             className="contenido-paso-wrapper text-center"
           >
+            <h2 id="tittle_mobile" style={{ color: "white", fontWeight: "500" }}>
+              ¿Cómo Funciona?
+            </h2>
             {pasosInfo
               .filter((p) => p.id === pasoActual)
               .map((infoPaso) => (
@@ -405,7 +401,6 @@ export default function HomePage() {
       {/* --- */}
 
       <section id="OLote_Seccion">
-
         <div id="form_Container">
           <h2>Ofrecé Tu Lote De Porotos</h2>
           <p style={{ color: "#377448", marginBottom: "15px" }}>

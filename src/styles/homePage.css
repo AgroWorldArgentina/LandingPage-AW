@@ -10,12 +10,13 @@
   width: 80%;
   height: 100%;
   position: absolute;
-  z-index: 15;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  pointer-events: none;
 }
 
 h1 {
@@ -96,14 +97,18 @@ h4 {
 
   h4 {
     margin: 30px 0px;
-    font-size: 0.9rem;
-    /* background-color: orange; */
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 415px) {
   h1 {
     font-size: 1.6rem !important;
+  }
+
+    h4 {
+    margin: 30px 0px;
+    font-size: 1.1rem;
   }
 }
 
@@ -127,14 +132,12 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: red; */
 }
 
 #textoQS_Container {
   width: 40%;
   display: flex;
   flex-direction: column;
-  /* background-color: beige; */
 }
 
 h2 {
@@ -149,10 +152,15 @@ p {
   margin-bottom: 0;
 }
 
+#textoQS_color{
+color: #377448;
+font-size: 1rem;
+margin-bottom: 30px;
+}
+
 #imgQS_Container {
   display: flex;
   justify-content: center;
-  /* background-color: pink; */
 }
 
 #imgQS {
@@ -197,10 +205,19 @@ p {
   #textoQS_Container {
     width: 90%;
     padding: 0px 0px 30px 0px;
-    /* background-color: pink; */
-    /* Agregado */
     font-size: 0.9rem;
   }
+  
+}
+
+@media (max-width: 400px) {
+  #textoQS_color {
+    font-size: 0.9rem;
+  }
+
+   #textoQS_Container{
+    font-size: 0.8rem;
+   }
 }
 
 /* SECCION QUE OFRECEMOS */
@@ -325,7 +342,6 @@ p {
 .textoHover {
   font-size: 12px;
   margin: 0px 10px;
-  /* background-color: black; */
 }
 
 .d-block-mobile {
@@ -347,7 +363,6 @@ p {
 
   .textoHover {
     width: 80%;
-    /* background-color: black; */
   }
 
   .d-none-mobile {
@@ -382,11 +397,13 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* background-color: brown; */
+}
+
+#tittle_mobile{
+  display: none;
 }
 
 .stepper-visual-wrapper {
-  /* background-color: aqua; */
   position: relative;
   display: flex;
   align-items: center;
@@ -439,7 +456,6 @@ p {
 }
 
 .pasos_Container {
-  /* background-color: red; */
   width: 90%;
   position: absolute;
   display: flex;
@@ -454,7 +470,6 @@ p {
   border-radius: 50%;
   border: 1.5px solid white;
   color: #377448;
-  /* background-color: transparent; */
   background-color: white;
   font-size: x-large;
   display: flex;
@@ -465,7 +480,7 @@ p {
   position: relative;
 }
 
-/* Clase cuando el paso está activo o ya pasó */
+/* Cuando el paso está activo o ya pasó */
 .circulo-paso.activo {
   background-color: #a8d146;
   border-color: #a8d146;
@@ -475,9 +490,25 @@ p {
 
 #pasos_Contenido {
   width: 65%;
+  /* background-color: orange; */
 }
 
 @media (max-width: 650px) {
+#tittle_desktop{
+  display: none;
+}
+
+#pasos_Contenido{
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+}
+
+#tittle_mobile{
+  display: block;
+  margin-bottom: 80px;
+}
+
   #comoFunciona_Seccion {
     padding: 40px 0px;
   }
@@ -487,16 +518,13 @@ p {
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* background-color: orange; */
   }
 
-  #CF_Container h2 {
+  /* #CF_Container h2 {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
-    /* background-color: aqua; */
-  }
+    margin-bottom: 15px;
+  } */
 
   .stepper-visual-wrapper {
     flex-direction: column;
@@ -530,11 +558,9 @@ p {
   }
 
   .progress-bar-fill {
-    /* width: 100%; */
     position: absolute;
     top: 0;
     left: 0;
-    /* background-color: red; */
     transition: height 0.5s ease-in-out;
   }
 
@@ -562,7 +588,7 @@ p {
     align-items: center;
     min-height: 200px;
     font-size: 14px;
-    /* background-color: purple; */
+
   }
 
   .titulo-paso {
@@ -585,7 +611,6 @@ p {
 }
 
 #form_Container {
-  /* background-color: antiquewhite; */
   width: 30%;
   position: relative;
 }
@@ -623,7 +648,6 @@ input::-webkit-inner-spin-button {
 #mapa_Container {
   width: fit-content;
   position: relative;
-  /* background-color: aqua; */
 }
 
 #mapa_Container iframe {
