@@ -1,0 +1,684 @@
+/* SECCION CARRUSEL */
+#carrusel_Seccion {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#contenidoCarrusel {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  color: white;
+  font-size: clamp(1.5rem, 5vw, 3.8rem);
+}
+
+h4 {
+  width: 60%;
+  color: white;
+  margin: 40px 0px;
+  font-family: "Cormorant Garamond";
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+}
+
+#btnOfreceLote {
+  font-family: "Poppins";
+  background-color: #377448;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 0px;
+  padding: 10px 25px;
+  margin: 10px 0px;
+  pointer-events: auto;
+}
+
+#btnOfreceLote:hover {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+@media (max-width: 1100px) {
+  h4 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  #carrusel_Seccion {
+    height: 500px;
+  }
+
+  #carrusel_Seccion .carousel,
+  #carrusel_Seccion .carousel-inner,
+  #carrusel_Seccion .carousel-item,
+  #carrusel_Seccion .carousel-item img {
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  #contenidoCarrusel {
+    width: 90%;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin: 35px 0px;
+  }
+
+  #btnOfreceLote {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 448px) {
+  h1 {
+    font-size: 1.9rem !important;
+  }
+
+  h4 {
+    margin: 30px 0px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 415px) {
+  h1 {
+    font-size: 1.6rem !important;
+  }
+
+  h4 {
+    margin: 30px 0px;
+    font-size: 1.1rem;
+  }
+}
+
+/* SECCION QUIENES SOMOS */
+
+#quienesSomos_Seccion {
+  width: 100%;
+  min-height: auto;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("../assets/fondoQS.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#QS_Container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#textoQS_Container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #377448;
+  font-family: "Cormorant Garamond";
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+#textoQS_color {
+  color: #377448;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+#imgQS_Container {
+  display: flex;
+  justify-content: center;
+}
+
+#imgQS {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+}
+
+@media (max-width: 1100px) {
+  #imgQS_Container {
+    justify-content: end;
+  }
+
+  #imgQS {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #quienesSomos_Seccion {
+    background-position: center;
+  }
+}
+
+@media (max-width: 970px) {
+  #QS_Container {
+    flex-direction: column;
+  }
+
+  #textoQS_Container {
+    width: 70%;
+    padding: 0px 0px 30px 0px;
+    text-align: center;
+  }
+
+  #imgQS_Container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #textoQS_Container {
+    width: 90%;
+    padding: 0px 0px 30px 0px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #textoQS_color {
+    font-size: 0.9rem;
+  }
+
+  #textoQS_Container {
+    font-size: 0.8rem;
+  }
+}
+
+/* SECCION QUE OFRECEMOS */
+
+#queOfrecemos_Seccion {
+  width: 100%;
+  min-height: auto;
+  padding: 60px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/fondoQO.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#QO_Container {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  #queOfrecemos_Seccion {
+    background-position: left center;
+  }
+}
+
+@media (max-width: 768px) {
+  #QO_Container {
+    width: 80%;
+  }
+
+  #p_QO {
+    font-size: 0.9rem;
+  }
+}
+
+/* --SECCION BLOQUES-- */
+
+#section_Bloques {
+  display: flex;
+  width: 100%;
+}
+
+.container_Bloque {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bloque_1 {
+  width: 50%;
+  height: auto;
+}
+
+.img_Bloque {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.iconos_Bloques {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 70px;
+}
+
+.contenido_Bloque {
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.contenidoHover_Bloque {
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(55, 116, 72, 0.85);
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 3;
+}
+
+.container_Bloque:hover .contenido_Bloque {
+  opacity: 0;
+}
+
+.container_Bloque:hover .contenidoHover_Bloque:hover {
+  opacity: 1;
+}
+
+#container_Bloque234 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#container_Bloque2y3 {
+  width: 100%;
+  display: flex;
+}
+
+.textoHover {
+  font-size: 12px;
+  margin: 0px 10px;
+}
+
+.d-block-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #section_Bloques {
+    flex-direction: column;
+  }
+
+  .container_Bloque {
+    width: 100vw;
+  }
+
+  #container_Bloque2y3 {
+    flex-direction: column;
+  }
+
+  .textoHover {
+    width: 80%;
+  }
+
+  .d-none-mobile {
+    display: none !important;
+  }
+  .d-block-mobile {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* SECCION COMO FUNCIONA */
+
+#comoFunciona_Seccion {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url("../assets/imgCF.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0px;
+}
+
+#CF_Container {
+  width: 80%;
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#tittle_mobile {
+  display: none;
+}
+
+.stepper-visual-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 90%;
+  margin: 50px 0px;
+}
+
+.stepper-visual-wrapper::before,
+.stepper-visual-wrapper::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+.stepper-visual-wrapper::before {
+  left: 0px;
+}
+.stepper-visual-wrapper::after {
+  right: 0px;
+}
+
+.stepper-visual-wrapper.paso-activo::before {
+  background-color: #a8d146;
+}
+
+.stepper-visual-wrapper.paso-final::after {
+  background-color: #a8d146;
+}
+
+.progress-bar {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  z-index: 1;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #a8d146;
+  transition: width 0.5s ease-in-out;
+}
+
+.pasos_Container {
+  width: 90%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+
+.circulo-paso {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1.5px solid white;
+  color: #377448;
+  background-color: white;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Cuando el paso está activo o ya pasó */
+.circulo-paso.activo {
+  background-color: #a8d146;
+  border-color: #a8d146;
+  color: #377448;
+  box-shadow: 0 0 0 10px rgba(55, 116, 72, 0.5);
+}
+
+#pasos_Contenido {
+  width: 65%;
+}
+
+@media (max-width: 650px) {
+  #tittle_desktop {
+    display: none;
+  }
+
+  #pasos_Contenido {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+  }
+
+  #tittle_mobile {
+    display: block;
+    margin-bottom: 80px;
+  }
+
+  #comoFunciona_Seccion {
+    padding: 40px 0px;
+  }
+
+  #CF_Container {
+    width: 85%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .stepper-visual-wrapper {
+    flex-direction: column;
+    width: 50px;
+    height: 320px;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  .stepper-visual-wrapper::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .stepper-visual-wrapper::after {
+    top: auto;
+    bottom: 0;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .progress-bar {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    position: absolute;
+    top: 0;
+  }
+
+  .progress-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.5s ease-in-out;
+  }
+
+  .pasos_Container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 35px 0;
+    box-sizing: border-box;
+  }
+
+  .circulo-paso {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  #pasos_Contenido {
+    width: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    font-size: 14px;
+  }
+
+  .titulo-paso {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* SECCION OFRECE TU LOTE */
+
+#OLote_Seccion {
+  min-height: 130vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40px 0px;
+  background-image: url("../assets//fondoOfreceLote.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#form_Container {
+  width: 30%;
+  position: relative;
+}
+
+.formLabels {
+  color: #377448;
+}
+
+.formControls {
+  background-color: transparent;
+  border: 1px solid #76b35a;
+}
+
+/* Quitar flechas en Chrome, Safari, Edge y Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#btnEnviarInfo {
+  background-color: #377448;
+  border: none;
+  border-radius: 50px;
+  font-family: "Cormorant Garamond";
+  font-size: larger;
+}
+
+#btnEnviarInfo:hover {
+  background-color: transparent;
+  border: 1px solid #377448;
+  color: #377448;
+}
+
+#mapa_Container {
+  width: fit-content;
+  position: relative;
+}
+
+#mapa_Container iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1115px) {
+  #form_Container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  #OLote_Seccion {
+    flex-direction: column;
+    padding: 40px 0px;
+    height: auto;
+  }
+
+  #form_Container {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  #mapa_Container {
+    width: 50%;
+  }
+
+  #mapa_Container iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 680px) {
+  #form_Container {
+    width: 70%;
+  }
+
+  #mapa_Container {
+    width: 70%;
+  }
+}

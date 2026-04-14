@@ -1,0 +1,49 @@
+#header_Container {
+  background-color: #377448;
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar_Container {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#links_Container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo_Container {
+  width: fit-content;
+  height: fit-content;
+}
+
+.navLinks {
+  color: white;
+  font-family: "Cormorant Garamond";
+  font-size: larger;
+}
+
+.navLinks:hover,
+.navLinks:active,
+.navLinks:focus {
+  color: #76b35a;
+}
+
+@media (max-width: 768px) {
+  #navbar_Container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #links_Container {
+    align-items: center;
+  }
+}

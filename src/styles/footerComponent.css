@@ -1,0 +1,54 @@
+#footer_Container {
+  background-color: #377448;
+  min-height: 12vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#infoFooter_Container {
+  width: 90%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconos_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconosRedes {
+  background-color: #a8d146;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+}
+
+@media (max-width: 850px) {
+  #infoFooter_Container {
+    flex-direction: column;
+  }
+
+  .iconos_Container {
+    flex-direction: row;
+    margin: 10px 0px;
+  }
+
+  #logotipoAW {
+    margin: 15px 0px;
+  }
+
+  .iconosRedes {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .iconoFooter{
+    margin-right: 10px ;
+  }
+}
