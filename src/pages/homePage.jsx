@@ -67,9 +67,9 @@ export default function HomePage() {
   const enviarEmail = (e) => {
     e.preventDefault();
 
-    const serviceID = "service_mps9ner";
-    const templateID = "template_b207hl8";
-    const publicKey = "YQxzDnV-OZL6zSUlt";
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
       (result) => {
@@ -415,7 +415,6 @@ export default function HomePage() {
 
           <Form ref={form} onSubmit={enviarEmail}>
             <Form.Group className="mb-3" controlId="formGroupName">
-              {/* <Form.Label className="formLabels">Nombre y Apellido</Form.Label> */}
               <Form.Control
                 className="formControls"
                 type="text"
@@ -426,9 +425,6 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupNumber">
-              {/* <Form.Label className="formLabels">
-                Teléfono / WhatsApp
-              </Form.Label> */}
               <Form.Control
                 type="number"
                 name="telefono"
@@ -439,7 +435,6 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              {/* <Form.Label className="formLabels">Email</Form.Label> */}
               <Form.Control
                 className="formControls"
                 type="email"
@@ -450,9 +445,6 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupProvincia">
-              {/* <Form.Label className="formLabels">
-                Provincia / Localidad
-              </Form.Label> */}
               <Form.Control
                 className="formControls"
                 type="text"
@@ -498,9 +490,6 @@ export default function HomePage() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupCantidad">
-              {/* <Form.Label className="formLabels">
-                Cantidad aproximada (toneladas)
-              </Form.Label> */}
               <Form.Control
                 type="number"
                 name="cantidad_tn"

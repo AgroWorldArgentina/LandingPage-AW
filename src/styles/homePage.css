@@ -73,7 +73,6 @@ h4 {
   #contenidoCarrusel {
     width: 90%;
     height: 100%;
-    /* background-color: pink; */
   }
 
   h1 {
@@ -240,7 +239,6 @@ p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* background-color: #a8d146; */
 }
 
 @media (max-width: 1000px) {
@@ -490,7 +488,6 @@ p {
 
 #pasos_Contenido {
   width: 65%;
-  /* background-color: orange; */
 }
 
 @media (max-width: 650px) {
@@ -519,12 +516,6 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  /* #CF_Container h2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
-  } */
 
   .stepper-visual-wrapper {
     flex-direction: column;

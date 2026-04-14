@@ -1,7 +1,6 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import HeaderComponent from "./components/headerComponent";
 import HomePage from "./pages/homePage";
 import FooterComponent from "./components/footerComponent";
